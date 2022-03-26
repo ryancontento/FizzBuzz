@@ -1,12 +1,14 @@
 :root {
-  --primary-color: #00a5ba;
-  --secondary-color: #b49714;
-  --dark-color: #140e16;
-  --light-color: #bbbcbe;
+  --primary-color: #ff914d;
+  --secondary-color: #5e17eb;
+  --dark-color: #14003b;
+  --light-color: #bdbdbe;
 }
 
 body {
   font-color: var(--dark-color);
+  font-family: "Bebas Neue", cursive !important;
+  background: #f7f1f1 !important;
 }
 
 nav {
@@ -15,8 +17,16 @@ nav {
 }
 
 .nav-item {
-  font-color: var(--light-color);
+  color: #5e17eb !important;
 }
+
+.navbar-toggler {
+  color: var(--primary-color) !important;
+}
+
+/* .navbar-toggler-icon {
+  background: var(--primary-color) !important;
+} */
 
 footer {
   background-color: var(--dark-color);
@@ -50,11 +60,11 @@ footer .social > a {
 
 footer .social > a:hover {
   opacity: 0.9;
-  color: #b49714;
+  color: #5e17eb;
 }
 
 .checklist > li i {
-  color: #b49714;
+  color: #5e17eb;
 }
 
 code[class*="language-"],
