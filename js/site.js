@@ -16,6 +16,51 @@ function getValues() {
 
 function fizzBuzz(fizzValue, buzzValue) {
   let returnArray = [];
+
+  for (let i = 1; i <= 100; i++) {
+    let value =
+      (i % fizzValue == 0 ? "Fizz" : "") + (i % buzzValue == 0 ? "Buzz" : "") ||
+      i;
+    returnArray.push(value);
+  }
+  return returnArray;
+}
+
+// alternative method
+function fizzBuzzB(fizzValue, buzzValue) {
+  let returnArray = [];
+  let fizz = false;
+  let buzz = false;
+
+  for (let i = 1; i <= 100; i++) {
+    fizz = i % fizzValue == 0;
+    buzz = i % buzzValue == 0;
+
+    switch (true) {
+      case fizz && buzz: {
+        returnArray.push("FizzBuzz");
+        break;
+      }
+      case fizz: {
+        returnArray.push("Fizz");
+        break;
+      }
+      case buzz: {
+        returnArray.push("Buzz");
+        break;
+      }
+      default: {
+        returnArray.push(i);
+        break;
+      }
+    }
+  }
+  return returnArray;
+}
+
+// another alternative method
+function fizzBuzzC(fizzValue, buzzValue) {
+  let returnArray = [];
   for (let i = 1; i <= 100; i++) {
     if (i % fizzValue == 0 && i % buzzValue == 0) {
       returnArray.push("FizzBuzz");
